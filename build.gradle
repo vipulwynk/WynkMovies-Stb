@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "http://nexus.bsbportal.com/nexus/content/repositories/releases" }
+        google()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+ext {
+    moviesLibVersion = '0.0.1'
+    moviesLibVersionAar = moviesLibVersion + '@aar'
+    compileSdkVersion = 27
+    minSdkVersion = 17
+    targetSdkVersion = 27
+    buildToolsVersion = "27.0.2"
+    supportLibraryVersion = "27.0.2"
+    junitVersion = "4.12"
+    retrofitVersion = '2.3.0'
+    okHttp3Version = '3.8.1'
+    okHttpVersion = '2.7.0'
+    playServiceVersion = "11.6.0"
+    daggerVersion = '2.11'
+    archVersion = '1.0.0'
+    timberVersion = "4.6.0"
+    epoxyVersion = "2.7.3"
+    picassoVersion = "2.5.2"
+    dataBindingVersion = "3.0.1"
+    multiDexVersion = "1.0.2"
+    gsonVersion = "2.8.1"
+    rxJavaVersion = "2.0.7"
+    rxAndroidVersion = "2.0.1"
+    glideVersion = "4.5.0"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
