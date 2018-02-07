@@ -26,8 +26,8 @@ android {
 }
 
 dependencies {
-//    implementation "tv.airtel.movies:domain:$rootProject.ext.moviesLibVersion"
-//    implementation "tv.airtel.movies:data:$rootProject.ext.moviesLibVersionAar"
+    implementation "tv.airtel.movies:domain:$rootProject.ext.moviesLibVersion"
+    implementation "tv.airtel.movies:data:$rootProject.ext.moviesLibVersionAar"
 
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
